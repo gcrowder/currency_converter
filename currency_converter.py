@@ -5,7 +5,7 @@ class UnknownCurrencyCodeError(Exception):
 
 class CurrencyConverter:
 
-    def __init__(self, conversion_rates={'USD' : 1.0, 'EUR' : 0.878, 'GBP' : 0.701}):
+    def __init__(self, conversion_rates={'USD' : 1.0, 'EUR' : 0.878, 'GBP' : 0.701, 'JPY' : 110.947}):
         self.conversion_rates = conversion_rates
 
     def convert(self, currency_object, currency_code='USD'):
