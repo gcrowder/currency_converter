@@ -10,7 +10,11 @@ def make_currency():
         try:
             amount = float(input("Please enter an amount: "))
             currency_code = input("Please enter a currency code. Your options are USD, EUR, GBP, and JPY: ").upper()
-            return Currency(amount, currency_code)
+            if currency_code in CurrencyConverter().conversion_rates.keys():
+                return Currency(amount, currency_code)
+            else:
+                print("That currency code isn't in our database. Please try again.")
+                continue
         except ValueError:
             print("Only numbers will be accepted as amounts. Please try again.")
             continue
@@ -23,7 +27,7 @@ def make_conversion(currency_object):
             new_destination_currency_object = converter_object.convert(currency_object, destination_currency)
             return new_destination_currency_object
         except UnknownCurrencyCodeError:
-            print("We are unfamilar with that currency and it's exchange rate. Please try again.")
+            print("We are unfamilar with that currency and its exchange rate. Please try again.")
             continue
 
 def show_converted_currency(currency_object):
