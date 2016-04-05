@@ -10,8 +10,7 @@ class CurrencyConverter:
 
     def convert(self, currency_object, destination_currency_code='USD'):
         if destination_currency_code in self.conversion_rates:
-            total = currency_object.amount *
-                    (self.conversion_rates[destination_currency_code] / self.conversion_rates[currency_object.currency_code])
+            total = currency_object.amount * (self.conversion_rates[destination_currency_code] / self.conversion_rates[currency_object.currency_code])
             total = round(total, 2)
             new_currency_object = Currency(total, destination_currency_code)
             return new_currency_object
