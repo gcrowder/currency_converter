@@ -12,4 +12,4 @@ class CurrencyConverter takes a dictionary of conversion rates as an argument. t
 unittest suite for class CurrencyConverter. At present, all tests report success.
 
 ##converter.py
-A short CLI program to prove the efficacy of the Currency and CurrencyConverter classes. A more useful version with file I/O would be better. Needs better currency code checking.
+A short CLI program to prove the efficacy of the Currency and CurrencyConverter classes. A more useful version with file I/O would be better.
