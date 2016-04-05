@@ -8,7 +8,7 @@ class Currency:
         try:
             self.amount = float(amount)
             self.currency_code = currency_code
-        except:
+        except ValueError:
             for key in self.currency_dict:
                 if self.currency_dict[key] == amount[0]:
                     self.currency_code = key
